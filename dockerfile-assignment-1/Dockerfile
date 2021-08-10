@@ -26,7 +26,7 @@ FROM node:6-alpine
 EXPOSE 3000
 
 # - then it should use alpine package manager to install tini: 'apk add --update tini'
-apk add --update tini
+RUN apk add --update tini
 
 # - then it should create directory /usr/src/app for app files with 'mkdir -p /usr/src/app'
 WORKDIR /usr/src/app
